@@ -53,14 +53,9 @@ describe("password_is_ok", function(){
         expect(password_is_ok("43678bjhdfjnHJ")).toBe(true);
     });
 
-    
+
+    it('should check if password has more than 8 characters and is not null', function(){
+        expect(password_is_ok("12345ABcde")).toBe(true);
+    })
 });
 
-
-describe("neverOk(password)", function(){
-
-    it ("should have more than 8 characters", function(){
-        expect(neverOk("12345ABcde")).toBe(false);
-    });
-
-});
