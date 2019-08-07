@@ -30,6 +30,10 @@ function password_is_ok(password){
             var num = /[a-z]/;
             var five = num.test(password);
 
+            if(password.length < 9 || password.length == 0){
+                return "password is never OK";
+            }
+
             if(two || one || three){
                 return true;
             } else if(two || one || four){
@@ -47,10 +51,6 @@ function password_is_ok(password){
             
   
           
-        }
-        
-function neverOk(password){
-    if(password.length < 9 || password.length == 0){
-        return "Password is never OK";
-    }
 }
+        
+
